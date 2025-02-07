@@ -3,7 +3,7 @@ import Head from "next/head";
 import RootLayout, { metadata } from "./layout";
 
 describe("RootLayout", () => {
-  it('should have the title "Copilot Workspace Demo"', () => {
+  it('should have the title "Demo"', () => {
     render(
       <RootLayout>
         <div />
@@ -14,6 +14,6 @@ describe("RootLayout", () => {
     const title = head.querySelector("title");
 
     expect(title).toBeTruthy();
-    expect(title?.textContent).toBe("Copilot Workspace Demo");
+    expect(title?.textContent).toBe("Demo");
   });
 });
