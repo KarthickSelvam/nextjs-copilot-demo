@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { Button } from "../stories/Button"; // Pb9f9
 
 export default function Home() {
   return (
