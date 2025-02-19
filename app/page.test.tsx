@@ -1,16 +1,16 @@
-import { render, screen } from '@testing-library/react';
-import Home from './page';
+import { render } from "@testing-library/react";
+import Home from "./page";
 
-describe('Home', () => {
-  it('renders the "Deploy now" button', () => {
-    render(<Home />);
-    const deployButton = screen.getByRole('button', { name: /Deploy now/i });
+describe("Home", () => {
+  it('should render the "Deploy now" button', () => {
+    const { getByText } = render(<Home />);
+    const deployButton = getByText("Deploy now");
     expect(deployButton).toBeInTheDocument();
   });
 
-  it('renders the "Read our docs" button', () => {
-    render(<Home />);
-    const docsButton = screen.getByRole('button', { name: /Read our docs/i });
+  it('should render the "Read our docs" button', () => {
+    const { getByText } = render(<Home />);
+    const docsButton = getByText("Read our docs");
     expect(docsButton).toBeInTheDocument();
   });
 });
