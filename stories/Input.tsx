@@ -1,13 +1,16 @@
-import React from 'react';
+import React from "react";
 
-interface InputProps {
+interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   label: string;
-  placeholder?: string;
-  value: string;
-  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const Input: React.FC<InputProps> = ({ label, placeholder, value, onChange }) => {
+export const Input: React.FC<InputProps> = ({
+  label,
+  placeholder,
+  value,
+  onChange,
+  ...rest
+}) => {
   return (
     <div>
       <label>
@@ -18,17 +21,16 @@ const Input: React.FC<InputProps> = ({ label, placeholder, value, onChange }) =>
           value={value}
           onChange={onChange}
           style={{
-            padding: '8px',
-            margin: '8px 0',
-            boxSizing: 'border-box',
-            borderRadius: '4px',
-            border: '1px solid #ccc',
-            width: '100%',
+            padding: "8px",
+            margin: "8px 0",
+            boxSizing: "border-box",
+            borderRadius: "4px",
+            border: "1px solid #ccc",
+            width: "100%",
           }}
+          {...rest}
         />
       </label>
     </div>
   );
 };
-
-export default Input;
