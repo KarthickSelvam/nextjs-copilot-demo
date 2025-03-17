@@ -14,11 +14,27 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://www.localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+
+## Todo App
+
+This project includes a simple todo app. You can add, delete, and mark tasks as completed.
+
+### Adding a Task
+
+To add a task, type the task description in the input field and click the "Add Task" button.
+
+### Deleting a Task
+
+To delete a task, click the "Delete" button next to the task you want to delete.
+
+### Marking a Task as Completed
+
+To mark a task as completed, click the "Complete" button next to the task. To undo the completion, click the "Undo" button.
 
 ## Learn More
 
